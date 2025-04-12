@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/logo_300dpi.png')}}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <title>Pedro Garcia</title>
+</head>
+
+<body class="bg-gray-100 text-gray-900" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif;">
+    <header>
+        <nav class="bg-gray-800 text-white fixed top-0 left-0 w-full z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+                <div class="flex items-center justify-between h-12">
+                    <!-- Logotipo -->
+                    <div class="md:block items-center">
+                        <a href="/home" class="text-xl font-bold text-white flex items-center space-x-4">
+                            <img class="object-scale-down h-16" src="/static/images/logo_300dpi.png" alt="">
+                            <span>Pedro Garcia</span>
+                        </a>
+                    </div>
+
+                    <!-- Links da Navbar -->
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="/home#home"
+                                class="text-gray-300 hover:text-white hover:underline px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="/home#about"
+                                class="text-gray-300 hover:text-white hover:underline px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="/home#services"
+                                class="text-gray-300 hover:text-white hover:underline px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="/work"
+                                class="text-gray-300 hover:text-white hover:underline px-3 py-2 rounded-md text-sm font-medium">Work</a>
+                            <a href="/pgp"
+                                class="text-gray-300 hover:text-white hover:underline px-3 py-2 rounded-md text-sm font-medium">PGP</a>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Menu para Mobile -->
+                    <div class="flex md:hidden">
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                            aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
+                            <span class="sr-only">Abrir Menu</span>
+                            <!-- Ícone Hamburger -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="hidden px-6 h-screen" id="mobile-menu">
+                <div class="space-y-1 px-4 pt-2 pb-3 sm:px-3">
+                    <a href="/home"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium menu-link">Home</a>
+                    <hr>
+                    <a href="/home#about"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium menu-link">About</a>
+                    <hr>
+                    <a href="/home#services"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium menu-link">Services</a>
+                    <hr>
+                    <a href="/work"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium menu-link">Work</a>
+                    <hr>
+                    <a href="/pgp"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium menu-link">PGP</a>
+                    <br>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class=""> 

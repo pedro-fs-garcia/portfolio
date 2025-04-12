@@ -1,0 +1,82 @@
+<%- include('partials/header') %>
+
+<section id="showcase_work_section" class="bg-fixed bg-cover bg-center">
+    <div class="relative bg-cover bg-center pt-24 pb-12" style="background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+
+        <div class="relative flex flex-col items-center justify-center text-white">
+            <h1 class="text-4xl font-bold mb-4">A showcase of my work</h1>
+            <p class="max-w-4xl">
+                Here you'll find a selection of my most remarkable projects, each representing a part of my journey, creativity, and dedication. Every project was an opportunity to turn ideas into reality, always striving for excellence and innovation. Explore and discover how I transform challenges into results.
+            </p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4 py-4 items-center justify-center">
+        {% for project in projects %}
+
+            {% if project['id'] % 2 == 0 %}
+                <div id="{{project['name']}}" class="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+                    <!-- Imagem -->
+                    <div class="space-y-6 bg-gray-800 shadow-lg rounded-lg flex items-center justify-center" >
+                        <img src="{{project['image']}}"
+                            alt="Web development, responsive design, user friendly, Python, Flask"
+                            class="w-auto " style="height: 350px;"/>
+                    </div>
+                    <!-- Texto -->
+                    <div class="space-y-6">
+                        <!-- Título -->
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800"
+                            data-aos-duration="400">
+                            {{project['name']}}
+                        </h2>
+                        <!-- Parágrafo -->
+                        <p class="text-lg text-gray-600 leading-relaxed" data-aos="slide-up" data-aos-offset="120"
+                            data-aos-delay="100" data-aos-duration="400">    
+                            {{project['description']}}
+                        </p>
+                        <!-- Botão -->
+                        <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="200" data-aos-duration="400">
+                            <a href="{{project['github']}}"><button
+                                class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
+                                Check for more project details
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div id="{{project['name']}}" class="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+                    <!-- Texto -->
+                    <div class="space-y-6">
+                        <!-- Título -->
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800"
+                            data-aos-duration="400">
+                            {{project['name']}}
+                        </h2>
+                        <!-- Parágrafo -->
+                        <p class="text-lg text-gray-600 leading-relaxed" data-aos="slide-up" data-aos-offset="120"
+                            data-aos-delay="100" data-aos-duration="400">    
+                            {{project['description']}}
+                        </p>
+                        <!-- Botão -->
+                        <div data-aos="slide-up" data-aos-offset="120" data-aos-delay="200" data-aos-duration="400">
+                            <a href="{{project['github']}}"><button
+                                class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
+                                Check the project page on GitHub
+                            </button></a>
+                        </div>
+                    </div>
+                    <!-- Imagem -->
+                    <div class="space-y-6 bg-gray-800 shadow-lg rounded-lg flex items-center justify-center" >
+                        <img src="{{project['image']}}"
+                            alt="Web development, responsive design, user friendly, Python, Flask"
+                            class="w-auto " style="height: 350px;"/>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+
+    </div>
+</section>
+
+<%- include('partials/footer') %> 

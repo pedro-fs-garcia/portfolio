@@ -1,0 +1,78 @@
+</main>
+<footer class="bg-gray-800 text-white py-8 px-16">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Primeira Coluna -->
+        <div>
+            <h2 class="text-lg font-semibold mb-4">Contact Information</h2>
+            <ul class="text-gray-300 space-y-2">
+                <li>Email: {{global_data["email"]}}</li>
+                <li>Phone: {{global_data["phone"]}} </li>
+                <li>Address: {{global_data["address"]}} </li>
+                <li>
+                    <a href="/schedule"><button
+                            class="text-lg font-large hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
+                            Schedule appointment
+                        </button></a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Segunda Coluna -->
+        <div>
+            <h2 class="text-lg font-semibold mb-4">Find Us</h2>
+            <p class="text-gray-300">
+                We are a company dedicated to delivering the best services to our customers. Contact us for more
+                information or inquiries.
+            </p>
+            <br>
+            <ul style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+                <li>
+                    <a class="hover:text-blue-600 transition-all" href="{{global_data['github']}}" target="">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-blue-600 transition-all px-6" href="{{global_data['linkedin']}}" target="">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-blue-600 transition-all px-6" href="{{global_data['instagram']}}"
+                        target="">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-blue-600 transition-all px-6" href="#" target="">
+                        link
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mx-auto text-center text-gray-400 py-8">
+        <p>&copy; 2025 Pedro Garcia. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+<script>
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuLinks = document.querySelectorAll('.menu-link'); // Seleciona todos os links no menu
+
+// Abrir/Fechar menu ao clicar no botão
+menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Fechar o menu ao clicar em um link
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+</script>
+
+</html>
