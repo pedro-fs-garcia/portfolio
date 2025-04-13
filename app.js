@@ -10,36 +10,52 @@ app.set('views', path.join(__dirname, 'views'));
 // Middleware para arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Dados do portfólio (pode ser movido para um arquivo separado posteriormente)
-const portfolioData = {
-  nome: 'Seu Nome',
-  titulo: 'Portfólio Acadêmico',
-  sobre: 'Breve descrição sobre você e seus objetivos acadêmicos.',
-  projetos: [
+// Dados globais
+const globalData = {
+    email: "seu.email@exemplo.com",
+    phone: "(00) 00000-0000",
+    address: "Sua Cidade, Estado",
+    github: "https://github.com/seu-usuario",
+    linkedin: "https://linkedin.com/in/seu-usuario",
+    instagram: "https://instagram.com/seu-usuario"
+};
+
+// Dados dos projetos
+const projects = [
     {
-      titulo: 'Projeto 1',
-      descricao: 'Descrição do projeto 1',
-      tecnologias: ['Tecnologia 1', 'Tecnologia 2']
+        id: 1,
+        name: "Projeto 1",
+        description: "Descrição detalhada do projeto 1",
+        image: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg",
+        github: "https://github.com/seu-usuario/projeto1"
     },
     {
-      titulo: 'Projeto 2',
-      descricao: 'Descrição do projeto 2',
-      tecnologias: ['Tecnologia 3', 'Tecnologia 4']
+        id: 2,
+        name: "Projeto 2",
+        description: "Descrição detalhada do projeto 2",
+        image: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg",
+        github: "https://github.com/seu-usuario/projeto2"
     }
-  ]
-};
+];
+
+const meu_nome = "pedro garcia"
 
 // Rotas
 app.get('/', (req, res) => {
-  res.render('index', { portfolio: portfolioData });
+    res.render('index', { 
+        meu_nome: meu_nome
+    });
 });
 
 app.get('/projetos', (req, res) => {
-  res.render('projetos', { portfolio: portfolioData });
+    res.render('projetos', { 
+        global_data: globalData,
+        projects: projects
+    });
 });
 
 // Iniciar o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-}); 
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
