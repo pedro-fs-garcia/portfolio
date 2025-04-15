@@ -4,41 +4,89 @@
         "name":"Mestre Ágil",
         "github": "https://github.com/Titus-System/1Semestre-ADS",
         "image":"https://github.com/Titus-System/1Semestre-ADS/raw/5aaa1b580cbe7d8a66140fdc0de0b304689fa11f/docs/images/logo.png",
-        "description":"Mestre Ágil is an interactive and engaging educational platform designed to simplify learning and implementing the SCRUM methodology. The platform is deeply rooted in the values and pillars of SCRUM, focusing on delivering high-quality content to users while integrating standardized tools and effective assessment methods. The project is an academic project developed in the first semester of college It is the result of a semester worth of learning and work."
+        "description":"Mestre Ágil é uma plataforma interativa e educacional projetada para simplificar o aprendizado e a implementação da metodologia SCRUM. A plataforma está profundamente enraizada nas valores e pilares da SCRUM, focando na entrega de conteúdo de alta qualidade aos usuários, enquanto integra ferramentas padronizadas e métodos de avaliação eficazes. O projeto é um projeto acadêmico desenvolvido no primeiro semestre de faculdade, resultado de um semestre de aprendizado e trabalho.",
+        "desafios":"O projeto foi desenvolvido em um semestre, o que exigiu um alto nível de produtividade e organização. Além disso, a implementação do SCRUM como metodologia de desenvolvimento foi desafiadora, pois a equipe precisou se adaptar a um novo paradigma de trabalho e a uma nova cultura de desenvolvimento.",
+        "solucoes":"Para enfrentar esses desafios, a equipe adotou estratégias como: divisão de tarefas clara e organizada, uso de ferramentas de gerenciamento de projetos, como o Trello, e a realização de reuniões regulares para alinhamento e ajustes. Além disso, a equipe se esforçou para manter a comunicação clara e a motivação entre os membros, o que foi essencial para o sucesso do projeto.",
+        "aprendizados":"O projeto foi uma experiência valiosa para a equipe, pois proporcionou um aprendizado significativo sobre a importância da metodologia SCRUM no desenvolvimento de projetos de software. A equipe foi capaz de aprimorar suas habilidades de comunicação, colaboração e gerenciamento de projetos, o que é fundamental para o sucesso de qualquer projeto de desenvolvimento de software.",
+        "palavras_chave": ["SCRUM", "Metodologia", "Desenvolvimento", "Software", "Comunicação", "Colaboração", "Gerenciamento de Projetos"],
+        "technologies": ["Python", "Flask", "SQLite"],
+        "features": ["Reuniões", "Gerenciamento de Projetos", "Comunicação", "Colaboração", "Gerenciamento de Projetos"],
+        "status": "Completo",
+        "completionDate": "17-06-2024"
     },
     {
         "id": 2,
         "name":"IdScan",
         "github": "https://github.com/Titus-System/2semestre-ADS",
         "image":"https://raw.githubusercontent.com/Titus-System/2semestre-ADS/refs/heads/main/docs/logosemfundo_IDScan.png",
-        "description":"IdScan is an application for processing identity document images (Brazilian ID cards) using a local AI, without relying on external APIs, storing the extracted data in a local MySQL database. It is designed to streamline the digitization, extraction, and organization of information from physical documents, making data management more efficient.\n\nIdScan is an academic project developed during the second semester of college. It's goal was to develop a Java Desktop application that leverages Artificial Intelligence models to extract information from identity documents (IDs) and subsequently store and edit the data in a relational database (MySQL). All application operations, from AI-based processing to database interactions, are performed locally, ensuring data privacy and independence."
+        "description":"IdScan é uma aplicação para processamento de imagens de documentos de identificação (cartões de identidade brasileiros) usando uma IA local, sem depender de APIs externas, armazenando os dados extraídos em um banco de dados MySQL local. O objetivo do projeto é simplificar a digitalização, extração e organização de informações de documentos físicos, tornando a gestão de dados mais eficiente.\n\nIdScan é um projeto acadêmico desenvolvido durante o segundo semestre de faculdade. O objetivo do projeto foi desenvolver uma aplicação Java Desktop que utiliza modelos de Inteligência Artificial para extrair informações de documentos de identificação (IDs) e armazenar e editar os dados em um banco de dados relacional (MySQL). Todas as operações da aplicação, desde o processamento baseado em IA até as interações com o banco de dados, são realizadas localmente, garantindo a privacidade e independência dos dados.",
+        "desafios": "O principal desafio do projeto IdScan foi realizar todo o processamento de imagens e reconhecimento de texto de forma totalmente local, sem depender de APIs externas. Isso exigiu a escolha de ferramentas compatíveis com Java que fossem capazes de executar tarefas de OCR com eficiência. Além disso, a integração da IA com a interface gráfica da aplicação apresentou dificuldades técnicas, especialmente para manter a fluidez da interface durante operações pesadas. Por fim, projetar e implementar um banco de dados relacional robusto e funcional para armazenar os dados extraídos também foi uma tarefa complexa para o estágio acadêmico em que o projeto foi desenvolvido.",
+        "solucoes": "Para viabilizar o reconhecimento de texto de forma local, foi utilizada a biblioteca Tesseract OCR, que se mostrou eficiente e relativamente fácil de integrar com a aplicação Java. A interface gráfica foi estruturada com o uso de threads para isolar o processamento de imagens, garantindo que o usuário não fosse prejudicado por travamentos ou lentidão durante o uso. Também foram implementadas técnicas de pré-processamento de imagem, como binarização e ajuste de contraste, para melhorar a qualidade do reconhecimento. No lado do banco de dados, foi criada uma estrutura relacional em MySQL com campos bem definidos e funcionalidades básicas de CRUD, permitindo o gerenciamento completo dos dados extraídos de forma local e segura.",
+        "aprendizados": "Durante o desenvolvimento do IdScan, foram adquiridos conhecimentos valiosos sobre integração de bibliotecas de IA em projetos Java e sobre o funcionamento de técnicas de OCR em ambientes reais. O projeto reforçou a importância do pré-processamento de imagens para melhorar os resultados de reconhecimento, além de introduzir boas práticas no uso de threads para manter a performance de aplicações desktop. No aspecto de banco de dados, a modelagem e interação com MySQL proporcionaram uma experiência prática com normalização, consultas e manipulação de dados. Acima de tudo, o projeto destacou o valor da privacidade e da independência tecnológica, ao demonstrar que é possível construir soluções completas e eficientes sem depender de serviços externos.",
+        "palavras_chave": ["IA", "OCR", "Java", "MySQL", "Privacidade", "Processamento de Imagens", "SCRUM"],
+        "technologies": ["Java", "Ollama", "Tesseract OCR", "MySQL", "JavaFX", "Scene Builder", "JavaFX Scene Builder"],
+        "features": ["Reconhecimento de Texto", "Processamento de Imagens", "Banco de Dados", "Interface Gráfica", "Privacidade", "SCRUM"],
+        "status": "Completo",
+        "completionDate": "01-12-2024"
     },
     {
         "id": 3,
         "name":"FilmMash",
         "github": "https://github.com/pedro-fs-garcia/filmmash-android",
         "image":"https://raw.githubusercontent.com/pedro-fs-garcia/filmmash-android/refs/heads/Main/app/src/main/res/drawable-nodpi/leonardo_phoenix_design_a_minimalist_modern_logo_for_a_mobile_2.jpg",
-        "description":"Filmmash is a movie ranking app that uses the Elo rating system to rank movies based on user choices."
+        "description":"Filmmash é um aplicativo de classificação de filmes que utiliza o sistema de classificação Elo para classificar filmes com base nas escolhas dos usuários.",
+        "desafios": "O principal desafio do desenvolvimento do Filmmash foi adaptar o sistema de classificação Elo, originalmente criado para jogos de xadrez, a um contexto de preferências subjetivas entre filmes. Foi necessário compreender profundamente o funcionamento do algoritmo e ajustá-lo para lidar com empates, número limitado de comparações e variações nas preferências dos usuários. Além disso, garantir que a experiência do usuário fosse simples e intuitiva — permitindo comparações rápidas entre dois filmes — exigiu cuidado no design da interface e na fluidez das interações. Outro desafio técnico foi estruturar um sistema de persistência de dados eficiente, para registrar as classificações de forma consistente e segura.",
+        "solucoes": "Para aplicar o sistema Elo ao ranking de filmes, o algoritmo foi adaptado para atribuir pontuações dinâmicas a cada filme com base nas escolhas feitas pelos usuários em comparações diretas. A interface foi projetada de forma minimalista e responsiva, com foco em decisões rápidas — onde o usuário escolhe qual dos dois filmes prefere. Essa abordagem facilitou o acúmulo de dados e tornou a experiência envolvente. No backend, foi implementado um banco de dados relacional para armazenar filmes, pontuações e históricos de comparações, garantindo que os dados fossem atualizados corretamente após cada interação do usuário.",
+        "aprendizados": "O desenvolvimento do Filmmash proporcionou um aprendizado prático sobre como algoritmos matemáticos podem ser adaptados a contextos criativos e subjetivos. A aplicação do sistema Elo mostrou como decisões simples podem gerar rankings robustos e em constante evolução. Também foram reforçados conceitos de design centrado no usuário, banco de dados relacionais, e lógica de atualização em tempo real. Além disso, o projeto destacou a importância de coletar dados de forma estruturada para alimentar sistemas baseados em comportamento do usuário.",
+        "palavras_chave": ["Elo", "Filmes", "Algoritmos", "Android", "Kotlin", "Banco de Dados", "Design"],
+        "technologies": ["Kotlin", "Android Studio", "Jetpack Compose", "Python", "Flask", "MySQL"],
+        "features": ["Classificação de Filmes", "Sistema Elo", "Interface de Usuário", "Banco de Dados", "Design", "Android Studio"],
+        "status": "v1.0.0",
+        "completionDate": "20-01-2025"
     },
     {
         "id": 4,
         "name":"E-Studante",
         "github": "https://github.com/pedro-fs-garcia/estudante",
         "image":"https://raw.githubusercontent.com/pedro-fs-garcia/estudante/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp",
-        "description":"Aplicativo para criação de carteirinhas de estudante digitais"
+        "description":"Aplicativo para criação de carteirinhas de estudante digitais",
+        "desafios": "",
+        "solucoes": "",
+        "aprendizados": "",
+        "palavras_chave": ["Carteirinha", "Estudante", "Digital", "Android", "Kotlin", "Banco de Dados", "Design"],
+        "technologies": ["Kotlin", "Android Studio", "SQLite", "Retrofit", "Room", "Coroutines", "LiveData", "ViewModel"],
+        "features": ["Carteirinha de Estudante", "Interface de Usuário", "Banco de Dados", "Design", "Android Studio"],
+        "status": "v1.0.0_beta",
+        "completionDate": "15-01-2025"
     },
     {
         "id": 5,
         "name":"InsightFlow",
         "github": "https://github.com/Titus-System/InsightFlow",
         "image":"https://github.com/Titus-System/InsightFlow/raw/main/docs/logo_if_semfundo.png",
-        "description":"InsightFlow é um projeto que concentra dados de comércio exterior do Brasil, fornecendo informações essenciais para profissionais de logística e tomada de decisão. A plataforma oferecerá análises interativas, busca avançada e previsão de tendências para facilitar a compreensão do mercado."
+        "description":"InsightFlow é um projeto que concentra dados de comércio exterior do Brasil, fornecendo informações essenciais para profissionais de logística e tomada de decisão. A plataforma oferecerá análises interativas, busca avançada e previsão de tendências para facilitar a compreensão do mercado.",
+        "desafios": "O desenvolvimento do InsightFlow enfrentou como principal desafio a manipulação e normalização de grandes volumes de dados de comércio exterior, frequentemente com formatos inconsistentes e falta de padronização. A diversidade de fontes e a necessidade de garantir a integridade e a qualidade dos dados exigiram processos robustos de limpeza, transformação e modelagem. Além disso, projetar uma interface que combinasse interatividade, profundidade analítica e facilidade de uso foi desafiador, especialmente considerando o público-alvo formado por profissionais de logística e analistas de mercado. Por fim, implementar funcionalidades como busca avançada e previsão de tendências exigiu o uso de técnicas estatísticas e ferramentas analíticas integradas ao backend da aplicação.",
+        "solucoes": "Para lidar com a complexidade dos dados, foi realizado um trabalho inicial de análise e tratamento em notebooks Python, com uso de bibliotecas como Pandas para transformação e normalização. Os dados estruturados foram então armazenados em um banco relacional, garantindo consultas otimizadas para as funcionalidades da plataforma. A interface web foi desenvolvida com foco em usabilidade e responsividade, utilizando ferramentas modernas de frontend e gráficos interativos para facilitar a exploração visual dos dados. Para a previsão de tendências, foram aplicados modelos estatísticos e de machine learning em dados históricos, integrando os resultados à interface em forma de visualizações compreensíveis.",
+        "aprendizados": "O projeto InsightFlow proporcionou um aprendizado aprofundado sobre engenharia de dados, desde a coleta e tratamento até a visualização e análise de grandes volumes de informações. Foi possível aplicar conceitos de estatística, machine learning e bancos de dados relacionais em um contexto real, com foco em entrega de valor para o usuário final. Além disso, a experiência reforçou a importância da visualização clara e interativa na comunicação de insights complexos, bem como a necessidade de pensar a arquitetura do sistema com escalabilidade e performance em mente.",
+        "palavras_chave": ["Engenharia de Dados", "Estatística", "Machine Learning", "Banco de Dados", "Visualização de Dados", "Análise de Dados"],
+        "technologies": ["Python", "Pandas", "PostgreSQL", "Flask", "React", "D3.js", "Plotly", "Scikit-learn", "TensorFlow", "Keras"],
+        "features": ["Análise de Dados", "Visualização de Dados", "Banco de Dados", "Machine Learning", "Python", "Flask", "React", "D3.js", "Plotly", "Scikit-learn", "TensorFlow", "Keras"],
+        "status": "Em desenvolvimento",
+        "completionDate": ""
     },
     {
         "id": 6,
         "name":"JurisBot",
         "github": "https://github.com/pedro-fs-garcia/JurisBot",
         "image":"",
-        "description":"JurisBot é um agente de IA para pesquisa de jurisprudência. É uma ferramenta que usa tecnologia avançada para ajudar profissionais do Direito a encontrar e entender decisões judiciais de forma mais rápida e eficiente. O MVP constitui uma aplicação web simples, mas funcional, que permite buscar decisões, resumi-las e visualizar os resultados com filtros básicos. É como ter um assistente inteligente que facilita o trabalho jurídico!"
+        "description":"JurisBot é um agente de IA para pesquisa de jurisprudência. É uma ferramenta que usa tecnologia avançada para ajudar profissionais do Direito a encontrar e entender decisões judiciais de forma mais rápida e eficiente. O MVP constitui uma aplicação web simples, mas funcional, que permite buscar decisões, resumi-las e visualizar os resultados com filtros básicos. É como ter um assistente inteligente que facilita o trabalho jurídico!",
+        "desafios": "Um dos maiores desafios no desenvolvimento do JurisBot foi lidar com a complexidade dos textos jurídicos, que possuem linguagem técnica, estrutura densa e variações conforme tribunais e instâncias. Tornar esses documentos compreensíveis para um modelo de IA exigiu curadoria criteriosa de dados e testes constantes com diferentes abordagens de processamento de linguagem natural (PLN). Além disso, implementar um sistema de busca funcional que retornasse resultados relevantes e organizados foi tecnicamente desafiador, especialmente dentro das limitações de um MVP. Outro ponto complexo foi criar uma interface simples, mas que transmitisse profissionalismo e atendesse às necessidades de advogados e operadores do Direito.",
+        "solucoes": "Para viabilizar o entendimento das decisões judiciais pela IA, foi utilizado um modelo de linguagem pré-treinado com afinidade por texto jurídico, ajustado com exemplos cuidadosamente selecionados. A aplicação web foi construída de forma leve e intuitiva, priorizando filtros como tribunal, data e palavra-chave, e oferecendo resumos automáticos para facilitar a leitura dos resultados. A infraestrutura foi mantida local ou com uso mínimo de APIs externas, preservando a confidencialidade dos dados jurídicos consultados. Com isso, o JurisBot tornou-se uma ferramenta prática e acessível, mesmo em sua versão inicial.",
+        "aprendizados": "O JurisBot foi um projeto que uniu aprendizado técnico e compreensão do contexto jurídico. O processo de adaptação de modelos de IA para o domínio legal trouxe insights importantes sobre curadoria de dados especializados e uso de PLN em contextos sensíveis. Aprendeu-se também a equilibrar simplicidade e funcionalidade no desenvolvimento de uma interface que serve a um público exigente e pouco tolerante a erros. Além disso, o projeto destacou a importância de construir soluções que respeitem a privacidade e a responsabilidade no uso da inteligência artificial em áreas críticas como o Direito.",
+        "palavras_chave": ["IA", "Jurisprudência", "Web", "Python", "Flask", "Chatbot"],
+        "technologies": ["Python", "Flask", "Hugging Face", "Transformers", "Scikit-learn"],
+        "features": ["Análise de Dados", "Visualização de Dados", "Banco de Dados", "Machine Learning", "Python", "Flask"],
+        "status": "Em desenvolvimento",
+        "completionDate": ""
     }
 ]

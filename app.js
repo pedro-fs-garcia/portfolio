@@ -23,6 +23,19 @@ app.get('/projetos', (req, res) => {
     });
 });
 
+app.get('/projeto/:id', (req, res) => {
+    const projectId = parseInt(req.params.id);
+    const project = projects.find(p => p.id === projectId);
+    
+    if (!project) {
+        return res.status(404).send('Projeto não encontrado');
+    }
+    
+    res.render('descricao_projeto', { 
+        global_data: globalData,
+        project: project
+    });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
