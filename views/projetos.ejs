@@ -2,85 +2,124 @@
 
 <section id="showcase_work_section" class="bg-fixed bg-cover bg-center">
     <div class="relative bg-cover bg-center pt-24 pb-12" style="background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
-        <div class="relative flex flex-col items-center justify-center text-white">
-            <h1 class="text-4xl font-bold mb-4">Meus Projetos</h1>
-            <p class="max-w-4xl">
-                Aqui você encontrará uma seleção dos meus projetos mais notáveis, cada um representando uma parte da minha jornada, criatividade e dedicação. Cada projeto foi uma oportunidade de transformar ideias em realidade, sempre buscando excelência e inovação. Explore e descubra como transformo desafios em resultados.
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative flex flex-col items-center justify-center text-white z-10">
+            <h1 class="text-5xl font-bold mb-4 animate-fade-in" data-aos="fade-up">Meus Projetos</h1>
+            <p class="max-w-4xl text-center" data-aos="fade-up" data-aos-delay="200">
+                Aqui, uma seleção dos meus projetos mais notáveis — fragmentos de uma jornada feita de curiosidade, rigor e imaginação.
+                Cada criação é um exercício de transformar ideias em realidade, sempre com o olhar voltado à excelência e à invenção.
             </p>
         </div>
     </div>
     
-    <div class="container mx-auto px-4 py-4 items-center justify-center">
-        <% projects.forEach(function(project) { %>
-            <% if (project.id % 2 === 0) { %>
-                <div id="<%= project.name %>" class="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+    <div class="container mx-auto px-4 py-12">
+        <% projects.forEach(function(project, index) { %>
+            <div id="<%= project.name %>" 
+                 class="py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center"
+                 data-aos="fade-up"
+                 data-aos-delay="<%= index * 100 %>">
+                
+                <% if (project.id % 2 === 0) { %>
                     <!-- Imagem -->
-                    <div class="space-y-6 bg-gray-800 shadow-lg rounded-lg flex items-center justify-center">
-                        <img src="<%= project.image %>"
-                            alt="Desenvolvimento web, design responsivo, interface amigável"
-                            class="w-auto" style="height: 350px;"/>
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                        <div class="flex items-center justify-center relative bg-gray-800 shadow-lg rounded-2xl overflow-hidden">
+                            <img src="<%= project.image %>"
+                                alt="<%= project.name %>"
+                                class="w-auto transform group-hover:scale-105 transition duration-300"
+                                style="height: 350px; object-fit: cover;"/>
+                        </div>
                     </div>
                     <!-- Texto -->
                     <div class="space-y-6">
-                        <!-- Título -->
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
                             <%= project.name %>
                         </h2>
-                        <!-- Parágrafo -->
                         <p class="text-lg text-gray-600 leading-relaxed">    
                             <%= project.description %>
                         </p>
-                        <!-- Botão -->
-                        <div>
-                            <a href="<%= project.github %>">
-                                <button class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
-                                    Ver projeto no GitHub
-                                </button>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="<%= project.github %>" target="_blank"
+                                class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                                <span>Ver no GitHub</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
                             </a>
-                            <a href="/projeto/<%= project.id %>">
-                                <button class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
-                                    Ver mais detalhes do projeto
-                                </button>
+                            <a href="/projeto/<%= project.id %>"
+                                class="inline-flex items-center px-6 py-3 bg-white text-gray-800 border border-gray-800 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                                <span>Ver detalhes</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
                             </a>
                         </div>
                     </div>
-                </div>
-            <% } else { %>
-                <div id="<%= project.name %>" class="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+                <% } else { %>
                     <!-- Texto -->
                     <div class="space-y-6">
-                        <!-- Título -->
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
                             <%= project.name %>
                         </h2>
-                        <!-- Parágrafo -->
                         <p class="text-lg text-gray-600 leading-relaxed">    
                             <%= project.description %>
                         </p>
-                        <!-- Botão -->
-                        <div>
-                            <a href="<%= project.github %>">
-                                <button class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
-                                    Ver projeto no GitHub
-                                </button>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="<%= project.github %>" target="_blank"
+                                class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                                <span>Ver no GitHub</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
                             </a>
-                            <a href="/projeto/<%= project.id %>">
-                                <button class="text-lg font-large bg-gray-800 text-white hover:bg-gray-200 hover:text-black font-bold py-2 px-4 border hover:border-transparent">
-                                    Ver mais detalhes do projeto
-                                </button>
+                            <a href="/projeto/<%= project.id %>"
+                                class="inline-flex items-center px-6 py-3 bg-white text-gray-800 border border-gray-800 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                                <span>Ver detalhes</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
                             </a>
                         </div>
                     </div>
                     <!-- Imagem -->
-                    <div class="space-y-6 bg-gray-800 shadow-lg rounded-lg flex items-center justify-center">
-                        <img src="<%= project.image %>"
-                            alt="Desenvolvimento web, design responsivo, interface amigável"
-                            class="w-auto" style="height: 350px;"/>
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                        <div class="flex items-center justify-center relative bg-gray-800 shadow-lg rounded-2xl overflow-hidden">
+                            <img src="<%= project.image %>"
+                                alt="<%= project.name %>"
+                                class="w-auto transform group-hover:scale-105 transition duration-300"
+                                style="height: 350px; object-fit: cover;"/>
+                        </div>
                     </div>
-                </div>
-            <% } %>
+                <% } %>
+            </div>
         <% }); %>
     </div>
 </section>
+
+<style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+</script>
 
 <%- include('partials/footer') %>

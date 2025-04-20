@@ -9,7 +9,7 @@
         "solucoes":"Para enfrentar esses desafios, a equipe adotou estratégias como: divisão de tarefas clara e organizada, uso de ferramentas de gerenciamento de projetos, como o Trello, e a realização de reuniões regulares para alinhamento e ajustes. Além disso, a equipe se esforçou para manter a comunicação clara e a motivação entre os membros, o que foi essencial para o sucesso do projeto.",
         "aprendizados":"O projeto foi uma experiência valiosa para a equipe, pois proporcionou um aprendizado significativo sobre a importância da metodologia SCRUM no desenvolvimento de projetos de software. A equipe foi capaz de aprimorar suas habilidades de comunicação, colaboração e gerenciamento de projetos, o que é fundamental para o sucesso de qualquer projeto de desenvolvimento de software.",
         "palavras_chave": ["SCRUM", "Metodologia", "Desenvolvimento", "Software", "Comunicação", "Colaboração", "Gerenciamento de Projetos"],
-        "technologies": ["Python", "Flask", "SQLite"],
+        "technologies": ["Python", "Flask", "SQLite","HTML", "CSS", "SCRUM"],
         "features": ["Reuniões", "Gerenciamento de Projetos", "Comunicação", "Colaboração", "Gerenciamento de Projetos"],
         "status": "Completo",
         "completionDate": "17-06-2024"
