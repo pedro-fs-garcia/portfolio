@@ -10,6 +10,7 @@ app.use(express.static('public'));
 
 const globalData = require('./public/global_data.json');
 const projects = require('./public/projects.json');
+const { getPortfolio } = require('./exportPortfolio');
 
 app.get('/', (req, res) => {
     res.render('index', { 
@@ -17,10 +18,12 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/projetos', (req, res) => {
+app.get('/projetos', async (req, res) => {
+    const contact = await getContactInfo();
+    const projects = await getPortfolio();
     res.render('projetos', { 
-        global_data: globalData,
-        projects: projects
+        global_data: contact,
+        projects // agora é um array válido
     });
 });
 
