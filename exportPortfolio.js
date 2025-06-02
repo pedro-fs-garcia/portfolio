@@ -2,7 +2,7 @@ import 'dotenv/config'; // carrega .env automaticamente
 import fs from 'fs/promises';
 import mysql from 'mysql2/promise';
 
-dotenv.config()
+
 
 export async function getPortfolio() {
     const connection = await mysql.createConnection({
@@ -48,8 +48,8 @@ export async function getPortfolio() {
             solucoes: project.solucoes,
             aprendizados: project.aprendizados,
             status: project.status,
-            completionDate: project.completionDate 
-                ? new Date(project.completionDate).toISOString().slice(0, 10).split('-').reverse().join('-') 
+            completionDate: project.completionDate
+                ? new Date(project.completionDate).toISOString().slice(0, 10).split('-').reverse().join('-')
                 : null,
             palavras_chave: keywords.map(k => k.keyword),
             technologies: technologies.map(t => t.technology),
@@ -70,9 +70,23 @@ export async function getContactInfo() {
         database: process.env.DB_NAME
     });
 
-    const [rows] = await connection.execute('SELECT * FROM contact_info LIMIT 1');
+    const [rows] = await connection.execute('SELECT * FROM contacts LIMIT 1');
 
     await connection.end();
 
     return rows[0]; // Retorna o primeiro (e presumivelmente único) registro
+}
+
+
+export async function salvarMensagem(name, email, message) {
+    const connection = await mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
+    });
+
+    const query = `INSERT INTO mensagens (nome, email, mensagem) VALUES (?, ?, ?)`;
+    await connection.execute(query, [name, email, message]);
+    await connection.end();
 }

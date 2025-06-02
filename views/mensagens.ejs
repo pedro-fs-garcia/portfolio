@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+  <div class="max-w-5xl mx-auto px-4 py-32 py-10 min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+      <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">📬 Mensagens Recebidas</h1>
+
+      <% if (mensagens.length===0) { %>
+        <p class="text-center text-gray-500 text-lg">Nenhuma mensagem foi recebida ainda.</p>
+        <% } else { %>
+          <div class="space-y-6 divide-y divide-gray-200">
+            <% mensagens.forEach(({ id, nome, email, mensagem })=> { %>
+              <div class="pt-6 first:pt-0">
+                <div
+                  class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 relative">
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-700">👤 Nome:</span>
+                    <span class="ml-1 text-gray-800">
+                      <%= nome %>
+                    </span>
+                  </div>
+                  <div class="mb-2">
+                    <span class="font-semibold text-gray-700">✉️ Email:</span>
+                    <a href="mailto:<%= email %>" class="ml-1 text-blue-600 hover:underline">
+                      <%= email %>
+                    </a>
+                  </div>
+                  <div class="mt-3 mb-4">
+                    <p class="text-gray-700 whitespace-pre-wrap leading-relaxed">
+                      <%= mensagem %>
+                    </p>
+                  </div>
+
+                  <button onclick="excluirMensagem('<%= id %>')"
+                    class="absolute top-4 right-4 text-red-600 hover:text-red-800 font-medium text-sm bg-red-50 px-3 py-1 rounded-md shadow-sm hover:bg-red-100 transition">
+                    🗑 Excluir
+                  </button>
+                </div>
+              </div>
+              <% }) %>
+          </div>
+          <% } %>
+    </div>
+  </div>
+
+  <script>
+    async function excluirMensagem(id) {
+      id = Number(id);
+      if (!confirm("Tem certeza que deseja excluir esta mensagem?")) return;
+
+      const res = await fetch(`/exclui_mensagem/${id}`, {
+        method: 'DELETE'
+      });
+
+      if (res.ok) {
+        location.reload();
+      } else {
+        alert('Erro ao excluir mensagem.');
+      }
+    }
+  </script>
+
+  <%- include('partials/footer') %>
